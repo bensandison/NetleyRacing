@@ -1,10 +1,10 @@
 import React from "react"
 import {StyleSheet, View, Text} from "react-native"
 
-export default function Home() {
+export default function SignOn() {
     return (
         <View style={styles.container}>
-            <Text>Hello, this is home</Text>
+            <Text>Sign On Here</Text>
         </View>
     )
 }

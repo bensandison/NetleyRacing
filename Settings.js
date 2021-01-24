@@ -1,11 +1,10 @@
 import React from "react"
 import {StyleSheet, View, Text} from "react-native"
-import { exp } from "react-native/Libraries/Animated/src/Easing"
 
-export default function Tab2() {
+export default function Settings() {
     return (
         <View style={styles.container}>
-            <Text>Second Tab Content</Text>
+            <Text>Settings Here</Text>
         </View>
     )
 }
