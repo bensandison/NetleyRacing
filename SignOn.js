@@ -1,6 +1,12 @@
 import React from "react";
 import {StyleSheet, View} from "react-native";
-import { ActivityIndicator, Divider, Text, List } from 'react-native-paper';
+import { Divider, List } from 'react-native-paper';
+import RaceListItem from "./components/RaceListItem"
+
+const Races = {
+    "Summer Series" : ["17 June", "18 June", "19 June"],
+    "Regatta" : ["20 Aug", "21 Aug", "22 Aug"],
+};
 
 export default function SignOn() {
     return (
@@ -9,36 +15,18 @@ export default function SignOn() {
                 title="Summer Series"
                 titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
             >
-                <List.Item 
-                    title="Race One"
-                    description="17 June"
-                    left={() => <List.Icon icon="flag-outline" />}
-                    onPress={() => console.log("Race 1 Selected")}
-                />
-                <List.Item
-                    title="Race One"
-                    description="18 June"
-                    left={() => <List.Icon color="#000" icon="flag-outline" />}
-                    onPress={() => console.log("Race 2 Selected")}
-                />
+                <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
+                <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
+                <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
             </List.Section>
             <Divider/>
             <List.Section
-                title="Reggatta"
+                title="Regatta"
                 titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
             >
-                <List.Item 
-                    title="Race One"
-                    description="21 August"
-                    left={() => <List.Icon icon="flag-outline" />}
-                    onPress={() => console.log("Race 1 Selected")}
-                />
-                <List.Item
-                    title="Race One"
-                    description="22 August"
-                    left={() => <List.Icon color="#000" icon="flag-outline" />}
-                    onPress={() => console.log("Race 2 Selected")}
-                />
+            <RaceListItem raceName="Race One" raceDate = "22 Aug" iconColor = "blue"/>
+                <RaceListItem raceName="Race Two" raceDate = "23 Aug" iconColor = "blue"/>
+                <RaceListItem raceName="Race Three" raceDate = "24 Aug" iconColor = "blue"/>
             </List.Section>
         </View>
     )
