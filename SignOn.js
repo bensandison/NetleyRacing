@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import {StyleSheet, SafeAreaView, Text} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { Divider, List } from 'react-native-paper';
@@ -10,34 +9,7 @@ export default function SignOn() {
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
-                <List.Section
-                    title="Summer Series"
-                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
-                >
-                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
-                </List.Section>
-                <List.Section
-                    title="Summer Series"
-                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
-                >
-                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
-                </List.Section>
-                <List.Section
-                    title="Summer Series"
-                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
-                >
-                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
-                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
-                </List.Section>
-                <List.Section
-                    title="Summer Series"
-                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
-                >
+                <List.Section title="Summer Series" titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}>
                     <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
                     <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
                     <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
