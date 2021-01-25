@@ -1,77 +1,14 @@
-[
-    {
-        "id" : "000",
-        "name" : "Race One",
-        "date" : "17 June"
-    },
-    {
-        "id" : "001",
-        "name" : "Race Two",
-        "date" : "18 June"
-    },
-    {
-        "id" : "002",
-        "name" : "Race Three",
-        "date" : "22 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    },
-    {
-        "id" : "003",
-        "name" : "Race Four",
-        "date" : "23 June"
-    }
+{
+"summer series" : [
+    {"id" : "000", "name" : "Race One", "date" : "17 June"},
+    {"id" : "001", "name" : "Race Two", "date" : "18 June"},
+    {"id" : "002", "name" : "Race Three", "date" : "22 June"},
+    {"id" : "003", "name" : "Race Four", "date" : "23 June"}
+],
+"regatta" : [
+    {"id" : "000", "name" : "Race One", "date" : "21 June"},
+    {"id" : "001", "name" : "Race Two", "date" : "22 June"},
+    {"id" : "002", "name" : "Race Three", "date" : "26 June"},
+    {"id" : "003", "name" : "Race Four", "date" : "27 June"}
 ]
+}

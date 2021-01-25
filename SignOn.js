@@ -1,20 +1,50 @@
 import React from "react";
 import { render } from "react-dom";
-import {StyleSheet, FlatList} from "react-native";
+import {StyleSheet, SafeAreaView, Text} from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { Divider, List } from 'react-native-paper';
 import RaceListItem from "./components/RaceListItem"
 import races from "./data/races.json"
 
 export default function SignOn() {
     return (
-        <FlatList style={styles.container}
-            data={races}
-            renderItem={({item}) => {
-                return (
-                    <RaceListItem key={item.id} raceName={item.name} raceDate={item.date} iconColor="red"/>
-                )
-            }}
-        />
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <List.Section
+                    title="Summer Series"
+                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
+                >
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
+                </List.Section>
+                <List.Section
+                    title="Summer Series"
+                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
+                >
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
+                </List.Section>
+                <List.Section
+                    title="Summer Series"
+                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
+                >
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
+                </List.Section>
+                <List.Section
+                    title="Summer Series"
+                    titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}
+                >
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
+                </List.Section>
+                <Divider/>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 

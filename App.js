@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform, StatusBar } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {NavigationContainer} from "@react-navigation/native";
 import { Provider as PaperProvider } from "react-native-paper";
@@ -12,7 +13,7 @@ const Tab = createBottomTabNavigator();  //outside fn as it only needs to happen
 export default function MyTabs() {
   return (
     <PaperProvider>
-      <NavigationContainer>
+      <NavigationContainer style={{ paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }}>
         <Tab.Navigator
           initialRouteName="SignOn"
           backBehavior="history"
