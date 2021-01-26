@@ -3,8 +3,8 @@ import { Platform, StatusBar } from "react-native";
 import {StyleSheet, SafeAreaView, Text} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { Divider, List } from 'react-native-paper';
-import RaceListItem from "./components/RaceListItem"
-import races from "./data/races.json"
+import RaceListItem from "../RaceListItem"
+import races from "../../data/races.json"
 
 export default function SignOn() {
     return (
