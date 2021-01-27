@@ -15,7 +15,7 @@ export default function MyTabs() {
           backBehavior="history"
           tabBarOptions={{
             inactiveTintColor: "gray",
-            activeTintColor: "blue",
+            activeTintColor: '#6200EE',
             labelPosition: 'below-icon',
             keyboardHidesTabBar: "true",
             style: {
