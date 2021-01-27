@@ -1,69 +1,41 @@
 import React from 'react';
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import 'react-native-gesture-handler';
 import {NavigationContainer} from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import { Provider as PaperProvider } from "react-native-paper";
-import Ionicons from 'react-native-vector-icons/Ionicons';   //import vector icons
-import SignOn from "./SignOn.js";
-import MyResults from "./MyResults";
-import Settings from "./Settings";
 
-const Tab = createBottomTabNavigator();  //outside fn as it only needs to happen once
+//import screens
+import TabBarNav from "./screen/tabBarNav";
+import SplashScreen from "./screen/splashScreen"
+import LoginScreen from "./screen/loginScreen";
 
-export default function MyTabs() {
+const Stack = createStackNavigator();
+
+export default function App() {
   return (
     <PaperProvider>
-      <NavigationContainer>
-        <Tab.Navigator
-          initialRouteName="SignOn"
-          backBehavior="history"
-          tabBarOptions={{
-            inactiveTintColor: "gray",
-            activeTintColor: "blue",
-            labelPosition: 'below-icon',
-            keyboardHidesTabBar: "true",
-            style: {
-              height: 60,
-              backgroundColor: 'white',
-            },
-            labelStyle: {
-              fontSize: 12,
-              marginBottom: 6,
-            }
-          }}
-        >
-          <Tab.Screen 
-            name="SignOn" 
-            component={SignOn}
-            options={{
-              tabBarLabel: 'Sign On',
-              tabBarIcon: ({color, size }) => (
-                <Ionicons name="book-outline" color={color} size={size} />
-              ),
-            }}
-          />
-          <Tab.Screen 
-            name="MyResults" 
-            component={MyResults}
-            options={{
-              tabBarLabel: 'My Results',
-              tabBarIcon: ({color, size }) => (
-                <Ionicons name="eye-outline" color={color} size={size} />
-              ),
-              //tabBarBadge: 1, //may want to add this for dealing with notifications
-            }}
-          />
-          <Tab.Screen 
-            name="Settings" 
-            component={Settings}
-            options={{
-              tabBarLabel: 'Settings',
-              tabBarIcon: ({color, size }) => (
-                <Ionicons name="settings-outline" color={color} size={size} />
-              ),
-            }}
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SplashScreen">
+        {/* splash screen appears for 5 seconds*/}
+        <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{headerShown: false}}
+        />
+        {/*sent here if user.name is not saved*/}
+        <Stack.Screen
+          name="LoginScreen"
+          component={LoginScreen}
+          options={{headerShown: false}}
+        />
+        {/*if user is logged in, send them to home screen*/}
+        <Stack.Screen
+          name="TabBarNav"
+          component={TabBarNav}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
     </PaperProvider>
   )
 }
