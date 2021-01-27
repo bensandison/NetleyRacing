@@ -12,17 +12,17 @@ export default function SplashScreen({navigation}){
     const [animating, setAnimating] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
+        //setTimeout(() => {
           setAnimating(false);
           //Check if user.name is set or not
           //If not then send to login screen
           //else send to Home Screen
-          AsyncStorage.getItem('name').then((value) =>
+          AsyncStorage.getItem('userName').then((value) =>
             navigation.replace(
               value === null ? 'LoginScreen' : 'TabBarNav'
             ),
           );
-        }, 500);
+        //}, 5000);
       }, []);
 
     return(
