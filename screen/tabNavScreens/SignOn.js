@@ -17,6 +17,16 @@ export default function SignOn() {
                     <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "red"/>
                     <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "red"/>
                 </List.Section>
+                <List.Section title="Regatta" titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}>
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "blue"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "blue"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "blue"/>
+                </List.Section>
+                <List.Section title="Frostbite" titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}>
+                    <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "green"/>
+                    <RaceListItem raceName="Race Two" raceDate = "17 June" iconColor = "green"/>
+                    <RaceListItem raceName="Race Three" raceDate = "17 June" iconColor = "green"/>
+                </List.Section>
                 <Divider/>
             </ScrollView>
         </SafeAreaView>
