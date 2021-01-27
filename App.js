@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import {NavigationContainer} from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Provider as PaperProvider } from "react-native-paper";
+import Ionicons from 'react-native-vector-icons/Ionicons';   //import vector icons
 
 //import screens
 import TabBarNav from "./screen/tabBarNav";
@@ -13,7 +14,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <PaperProvider>
+    <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
         {/* splash screen appears for 5 seconds*/}

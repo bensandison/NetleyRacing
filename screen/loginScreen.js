@@ -3,10 +3,12 @@ import { Platform, StatusBar } from "react-native";
 import {
   SafeAreaView,
   StyleSheet,
-  Text,
+  Text
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { TextInput } from 'react-native-paper';
+import { TextInput} from 'react-native-paper';
+
+import AppBarComponent from './customComponents/appBarComponent';
 
 export default function LoginScreen ({navigation}) {
     //this is only being used to test
@@ -16,15 +18,16 @@ export default function LoginScreen ({navigation}) {
     
     return(
       <SafeAreaView style={styles.container}>
+        <AppBarComponent title="Login" disabled={true}/>
+        <Text styles={{fontSize: 200}}>Login:</Text>
         <TextInput
-          style={styles.input}
           label="Full Name"
+          placeholder="Enter Name"
           value={name}
           onChangeText={name => setName(name)}
+          style={styles.input}
           mode="outlined"
-
         />
-        <Text>Hello?</Text>
       </SafeAreaView>
     )
 }
@@ -46,6 +49,11 @@ const styles = StyleSheet.create({
     },
     input: {
       margin: 10,
-
+    },
+    header: {
+      margin: 20,
+      fontSize : 200,
+      fontWeight : "bold", 
+      color:"#222"
     }
 })
