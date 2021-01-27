@@ -3,11 +3,14 @@ import { Platform, StatusBar } from "react-native";
 import {StyleSheet, SafeAreaView, Text} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { Divider, List } from 'react-native-paper';
+
 import RaceListItem from "../customComponents/RaceListItem"
+import AppBarComponent from "../customComponents/appBarComponent";
 
 export default function SignOn() {
     return (
         <SafeAreaView style={styles.container}>
+            <AppBarComponent title="Sign On" disabled={true}/>
             <ScrollView>
                 <List.Section title="Summer Series" titleStyle={{fontSize : 20, fontWeight : "bold", color:"#222"}}>
                     <RaceListItem raceName="Race One" raceDate = "17 June" iconColor = "red"/>

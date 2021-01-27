@@ -1,25 +1,37 @@
 import React, {useState} from 'react';
-import { Platform, StatusBar } from "react-native";
 import {
   SafeAreaView,
   StyleSheet,
-  Text
+  Platform,
+  StatusBar
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { TextInput} from 'react-native-paper';
+import { TextInput, Button } from 'react-native-paper';
 
 import AppBarComponent from './customComponents/appBarComponent';
+import CustomHeader from './customComponents/customHeader'
 
 export default function LoginScreen ({navigation}) {
-    //this is only being used to test
-    const [name, setName] = useState('');
-    //saveData(name);
-    //navigation.replace('TabBarNav');
-    
+  const [name, setName] = useState('');
+
+  const saveData = async (name) => {  //function used to set a userName
+    if(name == ''){
+      console.log("enter a name") //TODO: need to add propper name checking and error message
+      return;
+    }
+    try {
+      await AsyncStorage.setItem("userName", name)
+      console.log("user name saved");
+      navigation.replace('TabBarNav');
+    } catch (err) {
+      alert(err)
+    }
+  }
+
     return(
       <SafeAreaView style={styles.container}>
         <AppBarComponent title="Login" disabled={true}/>
-        <Text styles={{fontSize: 200}}>Login:</Text>
+        <CustomHeader>Login:</CustomHeader>
         <TextInput
           label="Full Name"
           placeholder="Enter Name"
@@ -28,18 +40,15 @@ export default function LoginScreen ({navigation}) {
           style={styles.input}
           mode="outlined"
         />
+        <Button mode="contained" onPress={() => saveData(name)} style={styles.button} labelStyle={{fontSize: 20}}>
+          Login
+        </Button>
+        
       </SafeAreaView>
     )
 }
 
-const saveData = async (name) => {  //function used to set a members name
-  try {
-    await AsyncStorage.setItem("userName", name)
-    alert('Data successfully saved')
-  } catch (err) {
-    alert(err)
-  }
-}
+
 
 const styles = StyleSheet.create({
     container: {
@@ -50,10 +59,8 @@ const styles = StyleSheet.create({
     input: {
       margin: 10,
     },
-    header: {
+    button:{
       margin: 20,
-      fontSize : 200,
-      fontWeight : "bold", 
-      color:"#222"
+      alignSelf: 'center'
     }
 })
