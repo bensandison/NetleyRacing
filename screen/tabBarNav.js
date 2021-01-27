@@ -1,8 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {NavigationContainer} from "@react-navigation/native";
-
 import Ionicons from 'react-native-vector-icons/Ionicons';   //import vector icons
+
 import SignOn from "./tabNavScreens/SignOn";
 import MyResults from "./tabNavScreens/MyResults";
 import Settings from "./tabNavScreens/Settings";
