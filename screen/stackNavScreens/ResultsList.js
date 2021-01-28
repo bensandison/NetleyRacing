@@ -10,7 +10,7 @@ export default function MyResults() {
         <SafeAreaView style={styles.container}>
             <AppBarComponent title="My Results" disabled={true}/>
             <ScrollView>
-                <List.Section title="Recent Results:" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
+                <List.Section title="Recent Race Results:" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
                 <List.Item
                     title="Race 1"
                     description="Date"

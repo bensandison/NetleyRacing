@@ -12,10 +12,22 @@ export default function Settings() {
             <ScrollView>
                 <List.Section title="Settings:" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
                 <List.Item
-                    title={name}
+                    title="Ben Sandison"
                     description="Click To Change User Account"
-                    left={() => <List.Icon icon="person-outline" style={{backgroundColor:"#ff8080", borderRadius:30}}/>}
-                    onPress={() => console.log("press")}
+                    left={() => <List.Icon icon="person-outline" style={{backgroundColor:"#F8F", borderRadius:30}}/>}
+                    onPress={() => console.log("press")}    //TODO:Change user name
+                />
+                <List.Item
+                    title="Delete User Data"
+                    description="This will remove all data from past sign on's"
+                    left={() => <List.Icon icon="trash-outline" style={{backgroundColor:"#F55", borderRadius:30}}/>}
+                    onPress={() => console.log("press")}//TODO: Delete user data
+                />
+                <List.Item
+                    title="Theme"
+                    description="Light Mode"
+                    left={() => <List.Icon icon="sunny-outline" style={{backgroundColor:"#8FF", borderRadius:30}}/>}
+                    onPress={() => console.log("press")}//TODO: Add dark mode ( + changing list icon)
                 />
                 </List.Section>
             </ScrollView>
