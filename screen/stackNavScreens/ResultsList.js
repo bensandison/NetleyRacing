@@ -4,18 +4,19 @@ import { ScrollView } from "react-native-gesture-handler";
 import { Divider, List } from 'react-native-paper';
 
 import AppBarComponent from "../customComponents/appBarComponent";
+import ResultsGrid from "./ResultsGrid";
 
-export default function MyResults() {
+export default function MyResults({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
             <AppBarComponent title="My Results" disabled={true}/>
             <ScrollView>
-                <List.Section title="Recent Race Results:" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
+                <List.Section title="Recent Race Results" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
                 <List.Item
                     title="Race 1"
                     description="Date"
                     left={() => <List.Icon icon="flag-outline"/>}
-                    onPress={() => console.log("press")}
+                    onPress={() => navigation.navigate("ResultsGrid")}
                 />
                 </List.Section>
             </ScrollView>
