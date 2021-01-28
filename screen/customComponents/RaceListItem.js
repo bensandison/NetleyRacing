@@ -9,7 +9,7 @@ export default function RaceListItem( {raceName = "N/A", raceDate = "N/A", iconC
             title={raceName}    //may also want to add some indication if the user is already signed up
             description={raceDate}
             left={() => <List.Icon icon="flag-outline" color={iconColor} />}
-            onPress={() => console.log(navigation.navigate('SignOnForm'))}    //onPress could be determined by race name or we could pass a function / ID (include a default on press function in props so it wont break)
+            onPress={() => navigation.navigate('SignOnForm')}    //onPress could be determined by race name or we could pass a function / ID (include a default on press function in props so it wont break)
         />
     )
 }
