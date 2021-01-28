@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Appbar } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
-export default function AppBarComponent ({title, disabled=true}) {
+export default function AppBarComponent ({title, disabled=true}) {  //back button is disabled by default
+  const navigation = useNavigation(); //allows app bar back functionalty
 
   return(
  <Appbar style={styles.appBar}>
-    <Appbar.BackAction onPress={() => console.log("back button pressed")} disabled={disabled}/>
+    <Appbar.BackAction onPress={() => navigation.goBack()} disabled={disabled}/>
     <Appbar.Content title={title}/>
   </Appbar>
  );

@@ -10,9 +10,6 @@ export default function customText(props) {
     )
 }
 
-
-
-
 const styles = StyleSheet.create({
     standard: {
         margin: 15,
