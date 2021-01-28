@@ -12,7 +12,7 @@ export default function Settings() {
             <ScrollView>
                 <List.Section title="Settings:" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
                 <List.Item
-                    title="Ben Sandison"
+                    title={name}
                     description="Click To Change User Account"
                     left={() => <List.Icon icon="person-outline" style={{backgroundColor:"#ff8080", borderRadius:30}}/>}
                     onPress={() => console.log("press")}
