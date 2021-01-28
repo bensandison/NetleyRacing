@@ -12,17 +12,17 @@ import AppBarComponent from './customComponents/appBarComponent';
 import CustomHeader from './customComponents/customHeader'
 
 export default function LoginScreen ({navigation}) {
-  const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
 
-  const saveData = async (name) => {  //function used to set a userName
-    if(name == ''){
+  const saveData = async (userName) => {  //function used to set a userName
+    if(userName == ''){
       console.log("enter a name") //TODO: need to add propper name checking and error message
       return;
     }
     try {
-      await AsyncStorage.setItem("userName", name)
-      console.log("user name saved");
-      navigation.replace('TabBarNav');
+      await AsyncStorage.setItem("userName", userName)
+      console.log("userName saved");
+      navigation.replace('TabBarNav', {userName});  //sends new user name as a navigation param to 'TabBarNav'
     } catch (err) {
       alert(err)
     }
@@ -35,12 +35,12 @@ export default function LoginScreen ({navigation}) {
         <TextInput
           label="Full Name"
           placeholder="Enter Name"
-          value={name}
-          onChangeText={name => setName(name)}
+          value={userName}
+          onChangeText={userName => setUserName(userName)}
           style={styles.input}
           mode="outlined"
         />
-        <Button mode="contained" onPress={() => saveData(name)} style={styles.button} labelStyle={{fontSize: 20}}>
+        <Button mode="contained" onPress={() => saveData(userName)} style={styles.button} labelStyle={{fontSize: 20}}>
           Login
         </Button>
         

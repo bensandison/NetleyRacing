@@ -11,6 +11,7 @@ import SplashScreen from "./screen/splashScreen"
 import LoginScreen from "./screen/loginScreen";
 
 const Stack = createStackNavigator();
+const NameContext = React.createContext(null);
 
 export default function App() {
   return (
