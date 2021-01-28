@@ -2,8 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';   //import vector icons
 
-import SignOn from "./tabNavScreens/SignOn";
-import MyResults from "./tabNavScreens/MyResults";
+import SignOn from "./tabNavScreens/SignOnStack";
+import MyResults from "./tabNavScreens/ResultsStack";
 import Settings from "./tabNavScreens/Settings";
 
 const Tab = createBottomTabNavigator();  //outside fn as it only needs to happen once
@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();  //outside fn as it only needs to happen
 export default function MyTabs() {
   return (
       <Tab.Navigator
-          initialRouteName="SignOn"
+          initialRouteName="SignOnStack"
           backBehavior="history"
           tabBarOptions={{
             inactiveTintColor: "gray",
@@ -29,7 +29,7 @@ export default function MyTabs() {
           }}
         >
           <Tab.Screen 
-            name="SignOn" //sign on tab
+            name="SignOnStack" //sign on tab
             component={SignOn}
             options={{
               tabBarLabel: 'Sign On',
@@ -39,7 +39,7 @@ export default function MyTabs() {
             }}
           />
           <Tab.Screen 
-            name="MyResults" //results tab
+            name="ResultsStack" //results tab
             component={MyResults}
             options={{
               tabBarLabel: 'My Results',

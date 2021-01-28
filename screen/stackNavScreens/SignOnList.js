@@ -7,7 +7,7 @@ import { Divider, List } from 'react-native-paper';
 import RaceListItem from "../customComponents/RaceListItem"
 import AppBarComponent from "../customComponents/appBarComponent";
 
-export default function SignOn() {
+export default function SignOnList() {
     return (
         <SafeAreaView style={styles.container}>
             <AppBarComponent title="Sign On" disabled={true}/>

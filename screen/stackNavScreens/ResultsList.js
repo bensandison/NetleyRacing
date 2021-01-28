@@ -1,7 +1,7 @@
 import React from "react"
 import {StyleSheet, View, Text} from "react-native"
 
-export default function MyResults() {
+export default function ResultsList() {
     return (
         <View style={styles.container}>
             <Text>Your Results Here</Text>
