@@ -16,7 +16,7 @@ const Stack = createStackNavigator();
 export default function App() {
   const [userName, setUserName] = useState(null);
   return (
-    <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >  {/*sets Ionicons as default icons in paper*/}
+    <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
         {/* splash screen appears while checking for user login*/}
