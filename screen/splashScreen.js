@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-    ActivityIndicator,
     View,
     StyleSheet,
     Image
@@ -28,14 +27,8 @@ export default function SplashScreen({navigation}){
     return(
         <View style={styles.container}>
             <Image
-                source={require('../assets/icon.png')}
-                style={{width: '90%', resizeMode: 'contain', margin: 30}}
-            />
-            <ActivityIndicator
-                animating={animating}
-                color="#FFF"
-                size="large"
-                style={styles.ActivityIndicator}
+                source={require('../assets/splash.png')}
+                style={{width: '100%', resizeMode: 'contain', alignSelf: 'center'}}
             />
         </View>
     );
@@ -46,10 +39,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#307ecc',
-  },
-  activityIndicator: {
-    alignItems: 'center',
-    height: 80,
+    backgroundColor: '#FFF',
   },
 });

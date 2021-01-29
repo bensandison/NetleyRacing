@@ -9,6 +9,7 @@ import AppBarComponent from "../customComponents/appBarComponent";
 export default function SignOnList() {
     return (
         <SafeAreaView style={styles.container}>
+            <StatusBar backgroundColor="blue" barStyle={{backgroundColor: "blue"}} />
             <AppBarComponent title="Sign On" disabled={true}/>
             <ScrollView>
                 <List.Section title="Summer Series" titleStyle={{fontSize : 23, fontWeight : "bold", color:"#222"}}>
