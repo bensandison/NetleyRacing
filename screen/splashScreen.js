@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {
-    ActivityIndicator,
-    View,
-    StyleSheet,
-    Image
-} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
+import AppLoading from 'expo-app-loading';
 
 export default function SplashScreen({navigation}){
-    //state for activity indicator animation:
-    const [animating, setAnimating] = useState(true);
-
-    useEffect(() => {
-        //setTimeout(() => {
+    useEffect(() => {   //function starts on first render of AppLoading
           setAnimating(false);
           //Check if user.name is set or not
           //If not then send to login screen
@@ -22,34 +13,9 @@ export default function SplashScreen({navigation}){
               value === null ? 'LoginScreen' : 'TabBarNav'
             ),
           );
-        //}, 5000);
       }, []);
 
     return(
-        <View style={styles.container}>
-            <Image
-                source={require('../assets/icon.png')}
-                style={{width: '90%', resizeMode: 'contain', margin: 30}}
-            />
-            <ActivityIndicator
-                animating={animating}
-                color="#FFF"
-                size="large"
-                style={styles.ActivityIndicator}
-            />
-        </View>
+        <AppLoading/>   //default splash screen will be displayed while this component renders
     );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#307ecc',
-  },
-  activityIndicator: {
-    alignItems: 'center',
-    height: 80,
-  },
-});
