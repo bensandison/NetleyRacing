@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -13,6 +14,7 @@ import LoginScreen from "./screen/loginScreen";
 const Stack = createStackNavigator();
 
 export default function App() {
+  const [userName, setUserName] = useState(null);
   return (
     <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >  {/*sets Ionicons as default icons in paper*/}
     <NavigationContainer>
