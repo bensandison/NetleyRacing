@@ -13,13 +13,13 @@ export default function SplashScreen({navigation}){
     useEffect(() => {
         //setTimeout(() => {
           setAnimating(false);
-          //Check if user name is set or not
+          //Check if user.name is set or not
           //If not then send to login screen
           //else send to Home Screen
           AsyncStorage.getItem('userName').then((value) =>
-            value === null ?  //ternary opp -> if user name exists?
-              navigation.replace("LoginScreen") :   //go to login screen
-              navigation.replace("TabBarNav", {"userName" : value})   //sends user name as navigation prop to "TabBarNav"
+            navigation.replace(
+              value === null ? 'LoginScreen' : 'TabBarNav'
+            ),
           );
         //}, 5000);
       }, []);

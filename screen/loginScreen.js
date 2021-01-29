@@ -22,7 +22,7 @@ export default function LoginScreen ({navigation}) {
     try {
       await AsyncStorage.setItem("userName", userName)
       console.log("userName saved");
-      navigation.replace('TabBarNav', {"user name" : userName});  //sends new user name as a navigation param to 'TabBarNav'
+      navigation.replace('TabBarNav', {userName});  //sends new user name as a navigation param to 'TabBarNav'
     } catch (err) {
       alert(err)
     }
