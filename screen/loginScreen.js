@@ -15,7 +15,7 @@ export default function LoginScreen ({navigation}) {
   const [name, setName] = useState('');
 
   const saveData = async (name) => {  //function used to set a userName
-    if(name == ''){
+    if(name == ""){
       console.log("enter a name") //TODO: need to add propper name checking and error message
       return;
     }

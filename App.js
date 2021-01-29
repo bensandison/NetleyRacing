@@ -14,16 +14,16 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >
+    <PaperProvider settings={{ icon: props => <Ionicons {...props} /> }} >  {/*sets Ionicons as default icons in paper*/}
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
-        {/* splash screen appears for 5 seconds*/}
+        {/* splash screen appears while checking for user login*/}
         <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
           options={{headerShown: false}}
         />
-        {/*sent here if user.name is not saved*/}
+        {/*sent here if user is not logged in*/}
         <Stack.Screen
           name="LoginScreen"
           component={LoginScreen}
