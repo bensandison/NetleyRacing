@@ -6,8 +6,8 @@ import { Divider, List } from 'react-native-paper';
 import AppBarComponent from "../customComponents/appBarComponent";
 import AppContext from "../customComponents/appContext";
 
-export default function Settings({navigation}) {
-    const myContext = useContext(AppContext);
+export default function Settings({ navigation }) {
+    const myContext = useContext(AppContext);   //import global context variables
     return (
         <SafeAreaView style={styles.container}>
             <AppBarComponent title="Settings" disabled={true}/>
