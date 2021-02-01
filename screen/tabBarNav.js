@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';   //import vector icons
 
 import SignOn from "./tabNavScreens/SignOnStack";
-import MyResults from "./tabNavScreens/ResultsStack";
+import ResultsList from "./tabNavScreens/ResultsList";
 import Settings from "./tabNavScreens/Settings";
 
 const Tab = createBottomTabNavigator();  //outside fn as it only needs to happen once
@@ -38,9 +38,9 @@ export default function MyTabs() {
               ),
             }}
           />
-          <Tab.Screen 
-            name="ResultsStack" //results tab
-            component={MyResults}
+          <Tab.Screen
+            name="ResultsList" //results tab
+            component={ResultsList}
             options={{
               tabBarLabel: 'My Results',
               tabBarIcon: ({color, size }) => (

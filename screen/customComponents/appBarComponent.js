@@ -16,6 +16,6 @@ export default function AppBarComponent ({title, disabled=true}) {  //back butto
 
 const styles = StyleSheet.create({
   appBar: {
-    marginBottom: 10,   //prevents items being placed directly bellow app bar
+    //marginBottom: 10,   //prevents items being placed directly bellow app bar
   },
 });
