@@ -24,9 +24,6 @@ export default function SignOnForm({ route, navigation }) {
         "helmName" : helmName,
         "crewName" : crewName,
       };
-      console.log("HEREEE:")
-      console.log(stringData.boatName);
-      console.log(stringData);
       //convert user boat data to string:
       stringData = JSON.stringify(stringData);
       //pass stringData to saveAsync function:
@@ -44,8 +41,6 @@ export default function SignOnForm({ route, navigation }) {
     //get recent boat data from async
     let recentBoatData = GetData(); //get object of recent boat data
     //if (recentBoatData.helmName === "") recentBoatData.helmName = myContext.userName; //if recent helm name is empty, set helm name to user name
-
-    console.log("sail no = " + recentBoatData.sailNumber);
 
     return (
     <SafeAreaView style={styles.container}>
@@ -104,10 +99,8 @@ export default function SignOnForm({ route, navigation }) {
 
 const GetData = async () => {
   AsyncStorage.getItem('userBoatData').then((value) => {
-    console.log("string data (as object): " + value);
     //parse async object to string
     const userBoatData = JSON.parse(value);
-    console.log("after parse: " + userBoatData);
     //if no recent boat data is stored return values as empty strings
     if (value === null) {
       return {
